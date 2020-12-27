@@ -1,0 +1,58 @@
+.login { 
+    position: relative;
+    margin: auto;
+    padding: 25px;
+    max-width: 600px;
+    max-height: 900px;
+    background-color: #efefef;
+    color: #ffffff;
+    background-color: #000000;
+}
+
+.login span{
+    margin: 5px 5px;
+    font-size: 20px;
+}
+
+.login .title {
+    display: block;
+    font-size: 42px;
+}
+
+.login .subtitle{
+    display: block;
+    font-size: 22px;
+    padding: 8px 0;
+}
+
+.login input{
+    margin: 8px 5px;
+    min-height: 30px;
+    background-color: #ffffff; 
+}
+
+.login .info_text {
+    min-width: 280px;
+    font-size: 18px;
+    font-style: italic;
+}
+
+.login .login_buttom {
+    min-width: 180px;
+    font-size: 18px;
+    color: #858585;
+    background-color: #efefef; 
+}
+
+.login .regist {
+    font-size: 16px;
+    margin-top: 12px;
+    display: block;
+}
+
+.login a {
+    margin-right: 16px;
+    padding: 0;
+    color: #ffffff;
+}
+
