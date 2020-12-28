@@ -3,7 +3,7 @@
     margin: auto;
     padding: 25px 25px 1px 25px;
     max-width: 600px;
-    max-height: 900px;
+    max-height: 200px;
     color: #ffffff;
     background-color: #000000;
 }
@@ -16,6 +16,7 @@
 
 .login {
     position: relative;
+    /* float: left; */
     margin: auto;
     padding: 1px 25px 25px 25px;
     max-width: 600px;

@@ -14,15 +14,15 @@
         <script>document.getElementById('title').onclick =
                 function () { window.location = 'index.html'; }</script>
     </div>
-    <form action="php/login.php" method="post">
+    <form id="form" action="php/login.php" method="post" onsubmit="return checkSubmit();">
         <div class="login" id="with_name" style="display: block;">
             <span class="subtitle">
                 Login with username~
                 <a href="#" id="NametoMsg" onclick="showBlock(1)" style="font-size: 14px;">or with message</a>
             </span>
-            <input class="info_text" type="text" name="username" placeholder="nick name / phone number" />
+            <input class="info_text" id="username" type="text" name="username" placeholder="nick name / phone number" />
             <br />
-            <input class="info_text" type="password" name="password" placeholder="password" />
+            <input class="info_text" id="password" type="password" name="password" placeholder="password" />
             <span>(6~20)</span>
             <br />
             <input class="login_buttom" type="submit" name="name_submit" value="sign in ~" />
@@ -38,12 +38,12 @@
                 Login with message~
                 <a href="#" id="MsgtoName" onclick="showBlock(2)" style="font-size: 14px;">or with username</a>
             </span>
-            <input class="info_text" type="text" name="phonenumber" placeholder="phone number" />
+            <input class="info_text" id="phonenumber" type="text" name="phonenumber" placeholder="phone number" />
             <br />
-            <input class="feed_text" type="text" name="feedback" placeholder="checking code" />
+            <input class="feed_text" id="checkingcode" type="text" name="feedback" placeholder="checking code" />
             <input class="send_buttom" type="submit" name="send" value="send" />
             <br />
-            <input class="login_buttom" type="submit" name="msg_submit" value="sign in" />
+            <input class="login_buttom" type="submit" name="msg_submit" value="sign in~" />
             <span class="regist">
                 Don't have account?~
                 <br>
@@ -53,7 +53,6 @@
         </div>
     </form>
     <script src="js/login_shift.js"></script>
-
 </body>
 
 </html>

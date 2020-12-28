@@ -58,10 +58,6 @@ body {
     cursor: pointer;
 }
 
-a:hover{
-    color: #cccccc;
-}
-
 .main_top span{
     color: #ffffff;
 }
@@ -72,4 +68,8 @@ a:hover{
     border-width: 2px;
     margin: 0;
     padding: 0px 10px;
+}
+
+a:hover{
+    color: #cccccc;
 }
