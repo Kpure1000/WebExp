@@ -1,12 +1,40 @@
+.top {
+    position: relative;
+    margin: auto;
+    padding: 25px 25px 1px 25px;
+    max-width: 600px;
+    max-height: 900px;
+    color: #ffffff;
+    background-color: #000000;
+}
+
+.top a {
+    cursor: pointer;
+    display: block;
+    font-size: 42px;
+}
+
 .signup {
     position: relative;
     margin: auto;
-    padding: 25px;
+    padding: 1px 25px 25px 25px;
     max-width: 600px;
     max-height: 900px;
-    background-color: #efefef;
+    min-height: 280px;
     color: #ffffff;
     background-color: #000000;
+}
+
+.signup ul{
+    margin: 0;
+    padding: 0;
+}
+
+.signup li{
+    list-style: none;
+    margin: 3px 0px;
+    padding: 0;
+    font-size: 20px;
 }
 
 .signup span {
@@ -44,21 +72,20 @@
 }
 
 .signup .signup_buttom {
+    cursor: pointer;
     min-width: 180px;
     font-size: 18px;
     color: #858585;
     background-color: #efefef;
+    text-align: center;
 }
-
-
-/* .signup .regist {
-    font-size: 16px;
-    margin-top: 12px;
-    display: block;
-} */
 
 .signup a {
     margin-right: 16px;
     padding: 0;
     color: #ffffff;
+}
+
+a:hover {
+    color:#cccccc;
 }

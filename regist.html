@@ -9,24 +9,44 @@
 </head>
 
 <body>
+    <div class="top">
+        <a id="title">Neko Room =''=~</a>
+        <script>document.getElementById('title').onclick =
+                function () { window.location = 'index.html'; }</script>
+    </div>
     <div class="signup">
         <form action="php/regist.php" method="POST">
-            <span class="title">Neko Room =''=~</span>
-            <span class="subtitle">Regist here~</span>
-            <span class="intro">username setting (not repeat) :</span>
-            <input class="info_text" type="text" name="username" placeholder="nick name / phone number" />
-            <span class="intro">password setting(6~20) :</span>
-            <input class="info_text" type="password" name="password" placeholder="password" />
-            <span class="intro">repassword confirm :</span>
-            <input class="info_text" type="password" name="repassword" placeholder="repassword" />
-            <br>
-            <input class="signup_buttom" type="submit" name="Login~" value="sign up ~" />
-            <!-- <span class="regist">
-                    Don't have account?~
-                    <br>
-                    <a href="regist.html">Regist~</a>
-                    <a href="#" class="wj">Forgotten Password~</a>
-            </span> -->
+            <ul>
+                <li>
+                    <span>Regist with name</span>
+                </li>
+                <li>
+                    <span>Nick name: </span>
+                </li>
+                <li>
+                    <input class="info_text" type="text" name="username" placeholder="nick name">
+                </li>
+                <li>
+                    <span>Password: </span>
+                </li>
+                <li>
+                    <input class="info_text" type="text" name="password" placeholder="password">
+                </li>
+                <li>
+                    <span>re password: </span>
+                </li>
+                <li>
+                    <input class="info_text" type="text" name="repassword" placeholder="re password">
+                </li>
+                <li>
+                    <input class="signup_buttom" type="text" name="confirm" value="re password">
+                </li>
+                <li>
+                    <span>
+                        <a href="login.html" style="font-size: 18px;">back to login</a>
+                    </span>
+                </li>
+            </ul>
         </form>
     </div>
 </body>

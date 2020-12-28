@@ -10,20 +10,22 @@
 
 <body>
     <div class="top">
-        <span class="title">Neko Room =''=~</span>
+        <a id="title">Neko Room =''=~</a>
+        <script>document.getElementById('title').onclick =
+                function () { window.location = 'index.html'; }</script>
     </div>
     <form action="php/login.php" method="post">
-        <div class="login" id="with_name" style="display: none;">
+        <div class="login" id="with_name" style="display: block;">
             <span class="subtitle">
                 Login with username~
-                <a href="#" style="font-size: 14px;">or with message</a>
+                <a href="#" id="NametoMsg" onclick="showBlock(1)" style="font-size: 14px;">or with message</a>
             </span>
             <input class="info_text" type="text" name="username" placeholder="nick name / phone number" />
             <br />
             <input class="info_text" type="password" name="password" placeholder="password" />
             <span>(6~20)</span>
             <br />
-            <input class="login_buttom" type="name_submit" name="Login~" value="sign in ~" />
+            <input class="login_buttom" type="submit" name="name_submit" value="sign in ~" />
             <span class="regist">
                 Don't have account?~
                 <br>
@@ -31,19 +33,26 @@
                 <a href="#" class="wj">Forgotten Password~</a>
             </span>
         </div>
-        <div class="login" id="with_phone">
+        <div class="login" id="with_phone" style="display: none;">
             <span class="subtitle">
                 Login with message~
-                <a href="#" style="font-size: 14px;">or with username</a>
+                <a href="#" id="MsgtoName" onclick="showBlock(2)" style="font-size: 14px;">or with username</a>
             </span>
-            <input type="text" class="info_text" name="phonenumber" placeholder="phone number" />
+            <input class="info_text" type="text" name="phonenumber" placeholder="phone number" />
             <br />
-            <input type="text" class="" name="feedback" placeholder="checking code" />
-            <input type="submit" class="" name="send" value="send message" />
+            <input class="feed_text" type="text" name="feedback" placeholder="checking code" />
+            <input class="send_buttom" type="submit" name="send" value="send" />
             <br />
-            <input type="submit" class="" name="msg_submit" value="sign in" />
+            <input class="login_buttom" type="submit" name="msg_submit" value="sign in" />
+            <span class="regist">
+                Don't have account?~
+                <br>
+                <a href="regist.html">Regist~</a>
+                <a href="#" class="wj">Forgotten Password~</a>
+            </span>
         </div>
     </form>
+    <script src="js/login_shift.js"></script>
 
 </body>
 

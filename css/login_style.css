@@ -1,14 +1,15 @@
 .top {
     position: relative;
     margin: auto;
-    padding: 1px 25px;
+    padding: 25px 25px 1px 25px;
     max-width: 600px;
     max-height: 900px;
     color: #ffffff;
     background-color: #000000;
 }
 
-.top .title {
+.top a{
+    cursor: pointer;
     display: block;
     font-size: 42px;
 }
@@ -19,7 +20,7 @@
     padding: 1px 25px 25px 25px;
     max-width: 600px;
     max-height: 900px;
-    min-height: 260px;
+    min-height: 280px;
     color: #ffffff;
     background-color: #000000;
 }
@@ -52,11 +53,27 @@
     font-style: italic;
 }
 
+.login .feed_text {
+    min-width: 100px;
+    font-size: 18px;
+    font-style: italic;
+}
+
 .login .login_buttom {
+    cursor: pointer;
     min-width: 180px;
     font-size: 18px;
     color: #858585;
     background-color: #efefef;
+    text-align: center;
+}
+
+.login .send_buttom {
+    cursor: pointer;
+    font-size: 18px;
+    color: #858585;
+    background-color: #efefef;
+    text-align: center;
 }
 
 .login .regist {
@@ -69,4 +86,8 @@
     margin-right: 16px;
     padding: 0;
     color: #ffffff;
+}
+
+a:hover {
+    color:#cccccc;
 }

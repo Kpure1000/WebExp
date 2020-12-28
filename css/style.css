@@ -14,9 +14,9 @@ body {
     padding: 0 15px;
 }
 
-.main_top span {
+/* .main_top span {
     color: #ffffff;
-}
+} */
 
 .main_top ul {
     align-items: center;
@@ -36,7 +36,6 @@ body {
 
 .main_top .logo {
     font-size: 30px;
-    cursor: default;
     float: left;
     border: white;
     border-style: solid;
@@ -59,6 +58,13 @@ body {
     cursor: pointer;
 }
 
+a:hover{
+    color: #cccccc;
+}
+
+.main_top span{
+    color: #ffffff;
+}
 .main_top .choice_border {
     border: #ffffff;
     border-left: solid;
