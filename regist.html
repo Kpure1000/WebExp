@@ -15,31 +15,31 @@
                 function () { window.location = 'index.html'; }</script>
     </div>
     <div class="signup">
-        <form action="php/regist.php" method="POST">
+        <form action="php/regist.php" method="POST" onsubmit="return checkSubmit()">
             <ul>
                 <li>
-                    <span>Regist with name</span>
+                    <span class="subtitle">Regist with name~</span>
                 </li>
                 <li>
                     <span>Nick name: </span>
                 </li>
                 <li>
-                    <input class="info_text" type="text" name="username" placeholder="nick name">
+                    <input class="info_text" id="username" type="text" name="username" placeholder="nick name">
                 </li>
                 <li>
                     <span>Password: </span>
                 </li>
                 <li>
-                    <input class="info_text" type="text" name="password" placeholder="password">
+                    <input class="info_text" id="password" type="text" name="password" placeholder="password">
                 </li>
                 <li>
                     <span>re password: </span>
                 </li>
                 <li>
-                    <input class="info_text" type="text" name="repassword" placeholder="re password">
+                    <input class="info_text" id="repassword" type="text" name="repassword" placeholder="re password">
                 </li>
                 <li>
-                    <input class="signup_buttom" type="text" name="confirm" value="re password">
+                    <input class="signup_buttom" type="submit" name="confirm" value="re password">
                 </li>
                 <li>
                     <span>
@@ -49,6 +49,7 @@
             </ul>
         </form>
     </div>
+    <script src="js/regist.js"></script>
 </body>
 
 </html>

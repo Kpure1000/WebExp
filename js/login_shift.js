@@ -3,10 +3,10 @@ function $(id) {
 }
 var isWithName = true;
 window.onload = function () {
-    $("username").value=null;
-    $("password").value=null;
-    $("phonenumber").value=null;
-    $("checkingcode").value=null;
+    $("username").value = null;
+    $("password").value = null;
+    $("phonenumber").value = null;
+    $("checkingcode").value = null;
 }
 function showBlock(i) {
     if (i == 1) {
@@ -32,7 +32,8 @@ function checkSubmit() {
     if (isWithName) {
         var uname = $("username");
         var pass = $("password");
-        if (uname.value.length > 30 || pass.value.length < 6 || pass.value.length > 20) {
+        if (uname.value.length == 0 || uname.value.length > 30
+            || pass.value.length < 6 || pass.value.length > 20) {
             alert("Lenght Wrong");
             return false;
         }
