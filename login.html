@@ -12,29 +12,39 @@
     <div class="top">
         <span class="title">Neko Room =''=~</span>
     </div>
-    <div class="login" id="with_name">
-        <form action="php/login.php" method="post">
+    <form action="php/login.php" method="post">
+        <div class="login" id="with_name" style="display: none;">
             <span class="subtitle">
-                    Login with username~
-                    <a href="#" style="font-size: 14px;">or with message</a>
+                Login with username~
+                <a href="#" style="font-size: 14px;">or with message</a>
             </span>
             <input class="info_text" type="text" name="username" placeholder="nick name / phone number" />
-            <br>
+            <br />
             <input class="info_text" type="password" name="password" placeholder="password" />
             <span>(6~20)</span>
             <br />
-            <input class="login_buttom" type="submit" name="Login~" value="sign in ~" />
+            <input class="login_buttom" type="name_submit" name="Login~" value="sign in ~" />
             <span class="regist">
-                    Don't have account?~
-                    <br>
-                    <a href="regist.html">Regist~</a>
-                    <a href="#" class="wj">Forgotten Password~</a>
+                Don't have account?~
+                <br>
+                <a href="regist.html">Regist~</a>
+                <a href="#" class="wj">Forgotten Password~</a>
             </span>
-        </form>
-        <div style="clear: both;"></div>
-    </div>
-    <div class="login" id="with_phone">
-    </div>
+        </div>
+        <div class="login" id="with_phone">
+            <span class="subtitle">
+                Login with message~
+                <a href="#" style="font-size: 14px;">or with username</a>
+            </span>
+            <input type="text" class="info_text" name="phonenumber" placeholder="phone number" />
+            <br />
+            <input type="text" class="" name="feedback" placeholder="checking code" />
+            <input type="submit" class="" name="send" value="send message" />
+            <br />
+            <input type="submit" class="" name="msg_submit" value="sign in" />
+        </div>
+    </form>
+
 </body>
 
 </html>

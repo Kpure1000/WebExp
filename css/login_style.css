@@ -4,7 +4,6 @@
     padding: 1px 25px;
     max-width: 600px;
     max-height: 900px;
-    background-color: #efefef;
     color: #ffffff;
     background-color: #000000;
 }
@@ -20,7 +19,7 @@
     padding: 1px 25px 25px 25px;
     max-width: 600px;
     max-height: 900px;
-    background-color: #efefef;
+    min-height: 260px;
     color: #ffffff;
     background-color: #000000;
 }
