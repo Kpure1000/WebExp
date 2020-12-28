@@ -9,25 +9,31 @@
 </head>
 
 <body>
-    <div class="login">
+    <div class="top">
+        <span class="title">Neko Room =''=~</span>
+    </div>
+    <div class="login" id="with_name">
         <form action="php/login.php" method="post">
-            <div>
-                <span class="title">Neko Room =''=~</span>
-                <span class="subtitle">Welcome, ご主人様~</span>
-                <input class="info_text" type="text" name="username" placeholder="nick name / phone number" />
-                <br>
-                <input class="info_text" type="password" name="password" placeholder="password" />
-                <br />
-                <input class="login_buttom" type="submit" name="Login~" value="sign in ~" />
-                <span class="regist">
+            <span class="subtitle">
+                    Login with username~
+                    <a href="#" style="font-size: 14px;">or with message</a>
+            </span>
+            <input class="info_text" type="text" name="username" placeholder="nick name / phone number" />
+            <br>
+            <input class="info_text" type="password" name="password" placeholder="password" />
+            <span>(6~20)</span>
+            <br />
+            <input class="login_buttom" type="submit" name="Login~" value="sign in ~" />
+            <span class="regist">
                     Don't have account?~
                     <br>
                     <a href="regist.html">Regist~</a>
                     <a href="#" class="wj">Forgotten Password~</a>
-                </span>
-            </div>
+            </span>
         </form>
         <div style="clear: both;"></div>
+    </div>
+    <div class="login" id="with_phone">
     </div>
 </body>
 
