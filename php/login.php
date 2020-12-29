@@ -2,8 +2,8 @@
 header("Content-type: text/html; charset=utf-8");
 $username = $_POST['username'];
 $password = $_POST['password'];
-$phonenum = $_POST['phonenumber'];
-$feedback = $_POST['feedback'];
+$bt_send = $_POST['send'];
+$bt_submit = $_POST['msg_submit'];
 $conn = new mysqli('localhost', 'root', null, 'login');
 if ($conn->connect_error) {
     echo 'Database connect failed';
@@ -20,31 +20,13 @@ if ($conn->connect_error) {
         $result = $conn->query($sql);
         $number = mysqli_num_rows($result);
         if ($number) {
-            $id = $result->fetch_assoc();
-            $expire = time() + 60 * 60 * 2; //2 hours
-            setcookie("curid", "$id", $expire);
-            echo '<script>window.location="../index.html";</script>';
+            echo '<script>window.location="../index.php";</script>';
         } else {
             echo '<script>alert("Username or password wrong or not exist");history.go(-1);</script>';
         }
-    } else if ($phonenum != '' || $feedback != '') {
-        if (strlen($phonenum) > 22) {
-            echo '<script>alert("Phone number length wrong");history.go(-1);</script>';
-        }
-        if (strlen($feedback) > 4) {
-            echo '<script>alert("Check code length wrong");history.go(-1);</script>';
-        }
-        $sql = "select phone from user where phone = '$_POST[phonenum]'";
-        $result = $conn->query($sql);
-        $number = mysqli_num_rows($result);
-        if ($number) {
-            //  TODO : check the feedback
-        } else {
-            echo '<script>alert("This phone number did not be registed");history.go(-1);</script>';
-        }
-        echo '<script>alert("Check code wrong");history.go(-1);</script>';
     } else {
-        echo '<script>alert("Please input");history.go(-1);</script>';
+        
+        echo '<script>alert("Please input user name");history.go(-1);</script>';
         exit(0);
     }
 }

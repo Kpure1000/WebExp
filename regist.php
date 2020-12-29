@@ -12,7 +12,7 @@
     <div class="top">
         <a id="title">Neko Room =''=~</a>
         <script>document.getElementById('title').onclick =
-                function () { window.location = 'index.html'; }</script>
+                function () { window.location = 'index.php'; }</script>
     </div>
     <div class="signup">
         <form action="php/regist.php" method="POST" onsubmit="return checkSubmit()">
@@ -25,6 +25,12 @@
                 </li>
                 <li>
                     <input class="info_text" id="username" type="text" name="username" placeholder="nick name">
+                </li>
+                <li>
+                    <span>Phone number: </span>
+                </li>
+                <li>
+                    <input class="info_text" id="phonenum" type="text" name="phonenumber" placeholder="phone number">
                 </li>
                 <li>
                     <span>Password: </span>
@@ -43,7 +49,7 @@
                 </li>
                 <li>
                     <span>
-                        <a href="login.html" style="font-size: 18px;">back to login</a>
+                        <a href="login.php" style="font-size: 18px;">back to login</a>
                     </span>
                 </li>
             </ul>

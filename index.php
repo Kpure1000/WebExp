@@ -43,22 +43,21 @@
                 <li>
                     <!-- should be desperated later -->
                     <span class="choice_border">
-                        <a href="login.html">Login</a>
+                        <a href="login.php">Login</a>
                     </span>
                 </li>
             </div>
         </ul>
     </div>
     <div class="container" id="container">
-        <div id="btn-prev" class="btn-ctrl">&lt;</div>
-        <div id="btn-next" class="btn-ctrl">&gt;</div>
+        <div id="btn-prev" class="btn-ctrl">&LT;</div>
+        <div id="btn-next" class="btn-ctrl">&GT;</div>
         <ul id="inner-list">
-            <li><img src="images/head1.jpeg" alt=""/></li>
-            <li><img src="images/head2.jpeg" alt=""/></li>
-            <li><img src="images/head3.jpeg" alt=""/></li>
+            <li><img src="images/head1.jpg" alt="" /></li>
+            <li><img src="images/head2.jpg" alt="" /></li>
+            <li><img src="images/head3.PNG" alt="" /></li>
         </ul>
         <ul id="dot-list">
-           
         </ul>
     </div>
     <script src="js/main.js"></script>

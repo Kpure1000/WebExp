@@ -3,8 +3,13 @@ header("Content-type: text/html; charset=utf-8");
 $username = $_POST['username'];
 $password = $_POST['password'];
 $repassword = $_POST['repassword'];
+$phonenumber = $_POST['phonenumber'];
 if ($username == '') {
     echo '<script>alert("Please input user name");history.go(-1);</script>';
+    exit(0);
+}
+if($phonenumber == ''){
+    echo '<script>alert("Please input phone number");history.go(-1);</script>';
     exit(0);
 }
 if ($password == '') {
@@ -34,10 +39,10 @@ if ($password == $repassword) {
         if ($number) {
             echo '<script>alert("This name has been registed!");history.go(-1);</script>';
         } else {
-            $sql_insert = "insert into user (id,name,pass,reg_time) values($id,'$username','$password',now())";
+            $sql_insert = "insert into user (id,name,pass,phone,reg_time) values($id,'$username','$password','$phonenumber',now())";
             $res_insert = $conn->query($sql_insert);
             if ($res_insert) {
-                echo '<script>window.location="../index.html";</script>';
+                echo '<script>window.location="../index.php";</script>';
             } else {
                 echo "<script>alert('System busy!');</script>";
             }
@@ -46,4 +51,3 @@ if ($password == $repassword) {
 } else {
     echo "<script>alert('Regist failed!'); history.go(-1);</script>";
 }
-?>

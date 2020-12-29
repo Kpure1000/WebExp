@@ -85,9 +85,9 @@ a:hover {
 }
 
 #container {
-    margin-left: 200px;
-    width: 700px;
-    height: 700px;
+    margin: auto;
+    width: 800px;
+    height: 550px;
     position: relative;
     overflow: hidden;
 }
@@ -103,6 +103,11 @@ a:hover {
     float: left;
 }
 
+#inner-list img {
+    width: 800px;
+    height: 550px;
+}
+
 #dot-list {
     position: absolute;
     bottom: 20px;
@@ -110,7 +115,7 @@ a:hover {
 }
 
 #dot-list li {
-    float: left;
+    /* float: left; */
     display: inline-block;
     width: 20px;
     height: 20px;
@@ -130,8 +135,9 @@ a:hover {
     position: absolute;
     cursor: pointer;
     top: 50%;
-    font-size: 36px;
-    color: red;
+    font-size: 32px;
+    color: #535353;
+    background-color: #cdcdcd;
     font-weight: 500;
     z-index: 2;
 }

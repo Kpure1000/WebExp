@@ -23,7 +23,7 @@ function getID() {
     alert("ID: " + document.cookie);
 }
 
-//
+// loop display
 
 window.onload = function() {
     var eleInners = document.getElementById('inner-list'),
