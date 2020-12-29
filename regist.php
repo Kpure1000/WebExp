@@ -36,13 +36,13 @@
                     <span>Password: </span>
                 </li>
                 <li>
-                    <input class="info_text" id="password" type="text" name="password" placeholder="password">
+                    <input class="info_text" id="password" type="password" name="password" placeholder="password">
                 </li>
                 <li>
                     <span>Re password: </span>
                 </li>
                 <li>
-                    <input class="info_text" id="repassword" type="text" name="repassword" placeholder="re password">
+                    <input class="info_text" id="repassword" type="password" name="repassword" placeholder="re password">
                 </li>
                 <li>
                     <input class="signup_buttom" type="submit" name="confirm" value="Sign in~">
