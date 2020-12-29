@@ -54,9 +54,8 @@ if ($conn->connect_error) {
         }
     } else if ($phonenum != '' && $feedback != '') {
         $feedCode = $_SESSION["code"];
-        print("origin: '$feedCode', feedback: '$feedback'");
         if ($feedback != $feedCode) {
-            echo '<script>alert("server: Check code wrong");</script>';
+            echo '<script>alert("server: Check code wrong");history.go(-1);</script>';
             exit(0);
         }
         echo '<script>window.location="../index.php";</script>';
