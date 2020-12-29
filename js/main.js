@@ -37,28 +37,33 @@ window.onload = function() {
         interval = null,
         index = 0,
         circle = 0;
-    //首先是克隆
+    //  clone(instance) the first img append to the last
     eleInners.appendChild(liImgs[0].cloneNode(true));
-    //生成小点点
+    //  create dot
     for (var i = 0, len = liImgs.length - 1; i < len; i++) {
         var li = document.createElement('li');
         li.innerHTML = i + 1;
         eleDots.appendChild(li)
     }
-    //第一个点高亮
+    //  highlight the frist dot
     liDots[0].className = 'cur'
-        //接着是动画，用差值和offsetLeft值和移动的值，给一个speed让它移动
+
+    /**
+     * the animate of inner
+     * @param {*} obj  sdasd
+     * @param {*} targetPlace target position value
+     */
     function animate(obj, targetPlace) {
         clearInterval(obj.timer);
         obj.timer = setInterval(function() {
-            //判断移动的位置是向左移动还是向右移动
+            //  judge the move directino
             var speed = obj.offsetLeft > targetPlace ? -15 : 15;
             var result = targetPlace - obj.offsetLeft;
-            //只要移动的差值大于speed，那么就一直让obj.style.left 改变
+            //  if the abs of move > speed, continue to move the object
             if (Math.abs(result) > Math.abs(speed)) {
                 obj.style.left = obj.offsetLeft + speed + 'px'
             } else {
-                //否则如果已经移动的，obj.offsetleft与要移动的位置十分接近了，
+                //  object close to target
                 obj.style.left = targetPlace + 'px';
                 clearInterval(obj.timer);
             }
@@ -66,54 +71,54 @@ window.onload = function() {
 
     }
 
-    //接着定时器
+    //  timer
     interval = setInterval(autoplay, 3000)
 
-    //向左的autoplay
+    //  autoplay (to left)
     function autoplay() {
         index++;
         if (index > liImgs.length - 1) {
-            eleInners.style.left = 0; //赶快跳回去
-            index = 1; //找到第二张图片
+            eleInners.style.left = 0; //  jump to left
+            index = 1; //  find the next one
         }
         animate(eleInners, -index * LI_WIDTH);
         circle++;
 
         if (circle >= liImgs.length - 1) {
-            circle = 0; //circle回到第一个点
+            circle = 0; //  back to the first dot
         }
         for (var i = 0, len = liDots.length; i < len; i++) {
             liDots[i].className = '';
-
         }
         liDots[circle].className = 'cur'
     }
-    //向右移动
+
+    //  move right
     function moveright() {
         index--;
         if (index < 0) {
             eleInners.style.left = -(liImgs.length - 2) * LI_WIDTH + 'px';
-            index = liImgs.length - 2; //找到倒数第二张图片
+            index = liImgs.length - 2; //  find one before the last
         }
         animate(eleInners, -index * LI_WIDTH);
         circle--;
         if (circle < 0) {
-            circle = liImgs.length - 2; //circle回到最后一个点
+            circle = liImgs.length - 2; //  back to the last one
         }
         for (var i = 0, len = liDots.length; i < len; i++) {
             liDots[i].className = '';
         }
         liDots[circle].className = 'cur'
     }
-    //        鼠标移入，清除定时器
+    //  mouse enter, timer clear
     eleInners.addEventListener('mouseenter', function(event) {
         clearInterval(interval)
     });
-    //        鼠标移出，开启定时器
+    //  mouse exit, timer start
     eleInners.addEventListener('mouseleave', function(event) {
         interval = setInterval(autoplay, 3000)
     });
-    //        点击dots
+    //  click dot
     eleDots.addEventListener('click', function(event) {
         clearInterval(interval);
         var target = event.target;

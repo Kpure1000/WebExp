@@ -115,7 +115,6 @@ a:hover {
 }
 
 #dot-list li {
-    /* float: left; */
     display: inline-block;
     width: 20px;
     height: 20px;
