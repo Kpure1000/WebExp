@@ -53,9 +53,9 @@
         <div id="btn-prev" class="btn-ctrl">&LT;</div>
         <div id="btn-next" class="btn-ctrl">&GT;</div>
         <ul id="inner-list">
-            <li><img src="images/head1.jpg" alt="" /></li>
-            <li><img src="images/head2.jpg" alt="" /></li>
-            <li><img src="images/head3.PNG" alt="" /></li>
+            <li><img src="images/img1.jpg" alt="" /></li>
+            <li><img src="images/img2.jpg" alt="" /></li>
+            <li><img src="images/img3.jpg" alt="" /></li>
         </ul>
         <ul id="dot-list">
         </ul>
