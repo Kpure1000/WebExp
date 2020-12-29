@@ -1,5 +1,4 @@
 <?php 
-session_start(); 
 header("Content-type: text/html; charset=utf-8");
 $username = $_POST['username'];
 $password = $_POST['password'];
@@ -38,7 +37,6 @@ if ($password == $repassword) {
             $sql_insert = "insert into user (id,name,pass,reg_time) values($id,'$username','$password',now())";
             $res_insert = $conn->query($sql_insert);
             if ($res_insert) {
-                $_SESSION['current_id'] = $id;
                 echo '<script>window.location="../index.html";</script>';
             } else {
                 echo "<script>alert('System busy!');</script>";
@@ -48,3 +46,4 @@ if ($password == $repassword) {
 } else {
     echo "<script>alert('Regist failed!'); history.go(-1);</script>";
 }
+?>

@@ -20,6 +20,9 @@ if ($conn->connect_error) {
         $result = $conn->query($sql);
         $number = mysqli_num_rows($result);
         if ($number) {
+            $id = $result->fetch_assoc();
+            $expire = time() + 60 * 60 * 2; //2 hours
+            setcookie("curid", "$id", $expire);
             echo '<script>window.location="../index.html";</script>';
         } else {
             echo '<script>alert("Username or password wrong or not exist");history.go(-1);</script>';
@@ -45,3 +48,4 @@ if ($conn->connect_error) {
         exit(0);
     }
 }
+?>
