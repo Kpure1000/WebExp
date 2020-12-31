@@ -14,13 +14,16 @@ function checkSubmit() {
         pass.value.length < 6 || pass.value.length > 20) {
         alert("User name or password is illegal");
         return false;
-    } else if (!phone_reg.exec(phone.value)) {
+    }
+    if (!phone_reg.exec(phone.value)) {
         alert("Phone number is illegal");
         return false;
-    } else if (!pass_reg.exec(pass.value)) {
+    }
+    if (!pass_reg.exec(pass.value)) {
         alert("Password is illegal(6~20; at least two kind of letter, number or charactor");
         return false;
-    } else if (pass.value != repass.value) {
+    }
+    if (pass.value != repass.value) {
         alert("The two passwords are inconsistent");
         return false;
     }

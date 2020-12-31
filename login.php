@@ -34,7 +34,7 @@
                 Don't have account?~
                 <br>
                 <a href="regist.php">Regist~</a>
-                <a href="#" class="wj">Forgotten Password~</a>
+                <a href="forgetpass.php" class="wj">Forgotten Password~</a>
             </span>
         </div>
     </form>

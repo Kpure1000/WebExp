@@ -26,10 +26,7 @@ function checkSubmit(type) {
     } else if (type == 1) {
         var phone = $("phonenumber");
         var check = $("checkingcode");
-        if (phone.value.length > 11) {
-            alert("Phone Wrong");
-            return false;
-        } else if (!reg.exec(phone.value)) {
+        if (!reg.exec(phone.value)) {
             alert("This is not a phone number");
             return false;
         }
