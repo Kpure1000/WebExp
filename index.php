@@ -27,7 +27,7 @@
                 </li>
                 <li>
                     <span class="choice_border">
-                        <a href="#2">My Following</a>
+                        <a href="code39/WebCode39.html">Code 39</a>
                     </span>
                 </li>
                 <li>
