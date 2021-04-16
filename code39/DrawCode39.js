@@ -46,7 +46,7 @@ class Code39Drawer extends BaseDrawer {
         }
 
         //  draw text
-        ctx.font = "22px Arial";
+        ctx.font = "22px Times New Roman";
         ctx.fillText(inStr, this.origin_x, 20 + this.pos_y + this.height);
     }
 
@@ -115,12 +115,12 @@ class Code39Drawer extends BaseDrawer {
 
     Flush(_fat, _fill, _long) {
         let tmpW = _fat ? this.width * 3.0 : this.width;
-        ctx.beginPath();
-        ctx.fillStyle = "rgba(0, 0, 0, 1.0)";
         if (_fill) {
+            ctx.beginPath();
+            ctx.fillStyle = "rgba(0, 0, 0, 1.0)";
             ctx.fillRect(this.pos_x, this.pos_y, tmpW, this.height);
+            ctx.closePath();
         }
-        ctx.closePath();
         this.pos_x += tmpW;
     }
 }

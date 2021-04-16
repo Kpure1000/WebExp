@@ -12,9 +12,14 @@
     margin-left: 20px;
 }
 
-.sel {
+.text {
     margin: auto;
     margin-top: 10px;
+}
+
+.sel {
+    margin: auto;
+    margin-top: 5px;
     padding: 5px;
     min-width: 300px;
     min-height: 25px;
@@ -22,7 +27,7 @@
 
 .inp {
     margin: auto;
-    margin-top: 10px;
+    margin-top: 5px;
     padding: 5px;
     min-width: 300px;
     min-height: 25px;
@@ -34,4 +39,20 @@
     padding: 5px;
     min-width: 80px;
     min-height: 25px;
+}
+
+.top {
+    position: relative;
+    margin: 10px;
+    padding: 25px 25px 1px 25px;
+    max-width: 600px;
+    max-height: 200px;
+    color: #ffffff;
+    background-color: #000000;
+}
+
+.top a {
+    cursor: pointer;
+    display: block;
+    font-size: 42px;
 }

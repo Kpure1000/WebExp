@@ -11,16 +11,7 @@ class ITF14Drawer extends BaseDrawer {
 
     draw(inStr) {
         inStr = "69" + inStr;
-        let sum = 0;
-        for (let i = 0, len = inStr.length; i < len; i++) {
-            if (i % 2 == 0) {
-                sum += (inStr[i] - '0') * 3;
-            } else {
-                sum += (inStr[i] - '0');
-            }
-        }
-        let checkCode = (10 - sum % 10) % 10;
-        inStr += checkCode;
+        inStr += CalculateCheckCode(inStr);
         inStr = "0" + inStr;
 
         //  start code
@@ -51,7 +42,7 @@ class ITF14Drawer extends BaseDrawer {
         }
 
         //  draw text
-        ctx.font = "22px Arial";
+        ctx.font = "22px Times New Roman";
         ctx.fillText(inStr, this.origin_x, 20 + this.pos_y + this.height);
 
     }
@@ -63,12 +54,12 @@ class ITF14Drawer extends BaseDrawer {
 
     Flush(_fat, _fill, _long) {
         let tmpW = _fat ? this.width * 3.0 : this.width;
-        ctx.beginPath();
-        ctx.fillStyle = "rgba(0, 0, 0, 1.0)";
         if (_fill) {
+            ctx.beginPath();
+            ctx.fillStyle = "rgba(0, 0, 0, 1.0)";
             ctx.fillRect(this.pos_x, this.pos_y, tmpW, this.height);
+            ctx.closePath();
         }
-        ctx.closePath();
         this.pos_x += tmpW;
     }
 }
