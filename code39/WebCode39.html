@@ -5,25 +5,49 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Code 39 - Productor</title>
+    <title>Bar Code - Productor</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <div class="top">
+        <a id="title" style="cursor: pointer;">
+            <b> ~Back to Neko Room=''=~</b>
+        </a>
+        <script>
+            document.getElementById('title').onclick =
+                function() {
+                    window.location = '../index.php';
+                }
+        </script>
+    </div>
     <ul style="list-style-type:none;">
+        <li>
+            <select class="sel" id="codeType" onchange="OnCodeChanged()">
+                <option value="ct_code_39">39码</option>
+                <option value="ct_ean_13">EAN-13（69码）</option>
+                <option value="ct_itf_14">ITF-14（交叉25码）</option>
+            </select>
+        </li>
         <li>
             <input class="inp" type="text" name="codeIn" id="inputer">
         </li>
         <li>
-            <button class="bt" onclick="doDraw()">点击生成39码</button>
-            <input class="chk" onchange="doDraw()" type="checkbox" name="" id="checker" checked>
-            <p style="display: inline-block;">是否添加校验位</p>
+            <button class="bt" onclick="DrawBarCode()">点击生成条形码</button>
+            <input class="chk" onchange="DrawBarCode()" type="checkbox" name="" id="checker" checked>
+            <p style="display: inline-block;">
+                是否添加校验位
+            </p>
         </li>
         <li>
             <canvas class="canv" id="canv" width="800px" height="250px"></canvas>
         </li>
     </ul>
+    <script src="./BaseDrawer.js "></script>
     <script src="./DrawCode39.js "></script>
+    <script src="./DrawCode69.js "></script>
+    <script src="./DrawITF_14.js "></script>
+    <script src="./BarCodeDrawer.js "></script>
 </body>
 
 </html>
