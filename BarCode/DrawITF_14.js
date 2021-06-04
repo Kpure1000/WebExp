@@ -5,7 +5,7 @@ var code25 = [
 
 class ITF14Drawer extends BaseDrawer {
     constructor() {
-        super(cvs.width * 0.1, cvs.height * 0.2, 2.0, cvs.height * 0.5);
+        super(cvs.width * 0.1, cvs.height * 0.2, 2.032, cvs.height * 0.5);
         this.outCode = [];
     }
 
@@ -53,7 +53,7 @@ class ITF14Drawer extends BaseDrawer {
     }
 
     Flush(_fat, _fill, _long) {
-        let tmpW = _fat ? this.width * 3.0 : this.width;
+        let tmpW = _fat ? this.width * 2.5 : this.width;
         if (_fill) {
             ctx.beginPath();
             ctx.fillStyle = "rgba(0, 0, 0, 1.0)";
