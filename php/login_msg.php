@@ -58,7 +58,11 @@ if ($conn->connect_error) {
             echo '<script>alert("server: Check code wrong");history.go(-1);</script>';
             exit(0);
         }
-        echo '<script>window.location="../index.php";</script>';
+        $sql = "select name from user where phone = '$phonenum'";
+        $result = $conn->query($sql);
+        $number = mysqli_num_rows($result);
+        setcookie("user", $result->fetch_object()->name, time() + 60, '/WebExp');
+        echo '<script>window.location="../loginok.php";</script>';
     } else {
         echo '<script>alert("server: Please input phone number");history.go(-1);</script>';
         exit(0);

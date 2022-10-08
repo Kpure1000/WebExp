@@ -17,7 +17,7 @@
             <div class="choice">
                 <li>
                     <span class="choice_border">
-                        <a href="#1">My Cats</a>
+                        <a href="./doc/doc.html">Documents</a>
                     </span>
                 </li>
                 <li>
@@ -37,14 +37,37 @@
                 </li>
                 <li>
                     <span class="choice_border">
-                        <a href="#" onclick="getID()">My account</a>
+                        <a href="login.php">Login</a>
                     </span>
                 </li>
                 <li>
-                    <!-- should be desperated later -->
-                    <span class="choice_border">
-                        <a href="login.php">Login</a>
+                    <span class="choice_boder">
+                        <a href="#1" onclick="getID()" id="myaccount"></a>
                     </span>
+                    <script>
+                        function getCookie(cname) {
+                            var name = cname + "=";
+                            var decodedCookie = decodeURIComponent(document.cookie);
+                            var ca = decodedCookie.split(';');
+                            for (var i = 0; i < ca.length; i++) {
+                                var c = ca[i];
+                                while (c.charAt(0) == ' ') {
+                                    c = c.substring(1);
+                                }
+                                if (c.indexOf(name) == 0) {
+                                    return c.substring(name.length, c.length);
+                                }
+                            }
+                            return "";
+                        }
+                        user = getCookie("user");
+                        if(user.length > 0)
+                            {
+                                document.getElementById("myaccount").textContent = user;
+                            }
+                        else
+                            document.getElementById("myaccount").textContent = "MyAccount";
+                    </script>
                 </li>
             </div>
         </ul>

@@ -13,7 +13,7 @@ session_start();
 
 <body>
     <div class="top">
-        <a id="title">Neko Room =''=~</a>
+        <a id="title">Nimuss Cinema =^_^=</a>
         <script>
             document.getElementById('title').onclick =
                 function() {
@@ -34,9 +34,9 @@ session_start();
             <br />
             <input class="login_buttom" id="submitbt" type="submit" name="submit" value="sign in~" />
             <span class="regist">
-                Don't have account?~
+                Don't have account?
                 <br>
-                <a href="regist.php">Regist~</a>
+                <a href="regist.php">Regist</a>
                 <a href="forgetpass.php" class="wj">Forgotten Password~</a>
             </span>
         </div>

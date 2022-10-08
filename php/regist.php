@@ -42,7 +42,7 @@ if ($password == $repassword) {
             $sql_insert = "insert into user (id,name,pass,phone,reg_time) values($id,'$username','$password','$phonenumber',now())";
             $res_insert = $conn->query($sql_insert);
             if ($res_insert) {
-                echo '<script>window.location="../index.php";</script>';
+                echo '<script>window.location="../loginok.php";</script>';
             } else {
                 echo "<script>alert('System busy!');</script>";
             }

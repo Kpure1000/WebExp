@@ -19,12 +19,17 @@ function getCookie(cname) {
 }
 
 function getID() {
-    // var ids = getCookie("curid");
-    alert("ID: " + document.cookie);
+    var ids = getCookie("user");
+    if (ids.length > 0) {
+        alert("已登录ID: " + ids);
+        window.location = "loginok.php";
+    } else {
+        alert("未登录，前往登录");
+        window.location = "login.php";
+    }
 }
 
 // loop display
-
 window.onload = function() {
     var eleInners = document.getElementById('inner-list'),
         eleDots = document.getElementById('dot-list'),
@@ -68,7 +73,6 @@ window.onload = function() {
                 clearInterval(obj.timer);
             }
         }, 10)
-
     }
 
     //  timer

@@ -13,7 +13,7 @@ session_start();
 
 <body>
     <div class="top">
-        <a id="title">Neko Room =''=~</a>
+        <a id="title">Nimuss Cinema =^_^=</a>
         <script>
             document.getElementById('title').onclick =
                 function() {
