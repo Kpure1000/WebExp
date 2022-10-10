@@ -32,7 +32,7 @@
                 </li>
                 <li>
                     <span class="choice_border">
-                        <a href="#3">Neko Store</a>
+                        <a href="./DyGraphEva/vis/index.html">DyGraphEva</a>
                     </span>
                 </li>
                 <li>
